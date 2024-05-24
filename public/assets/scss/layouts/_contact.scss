@@ -1,0 +1,74 @@
+/** Start Contact Section **/
+.bx-contact-section {
+  .title {
+    text-align: center;
+
+    p {
+      margin-bottom: 5px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $text-color;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 35px;
+      font-weight: 700;
+
+      .primary-clr {
+        color: $main-primary-color;
+        text-transform: uppercase;
+      }
+    }
+  }
+  form{
+    .border-box {
+      border-radius: 15px;
+      overflow: hidden;
+      border: 1px solid #dbdada;
+    }
+    .form-group {
+      overflow: hidden;
+      input {
+        padding: 10px 25px;
+        height: 62px;
+        font-size: 15px;
+        color: $text-color;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        &:not(:last-child) {
+          border-bottom: 1px solid #dbdada;
+        }
+        &:focus, &:active {
+          border-radius: 0;
+          border-bottom: 1px solid #dbdada;
+        }
+      }
+      .border-none {
+        border: 0;
+        &:focus, &:active {
+          border-bottom: 0;
+        }
+      }
+      textarea {
+        padding: 10px 25px;
+        font-size: 15px;
+        color: $text-color;
+        border: 1px solid #dbdada;
+        border-radius: 15px;
+        &:focus, &:active {
+          border-radius: 0;
+          border-radius: 15px;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .custom-btn {
+    margin-top: 30px;
+  }
+}
+/** End Contact Section **/
+

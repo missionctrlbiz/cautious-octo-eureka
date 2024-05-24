@@ -1,0 +1,216 @@
+/**  Dark css  **/
+$main-bg: #120f1c;
+$main-bg-light: #161321;
+$header-bg-light: #1d1a29;
+$border: #27213b;
+body, section {
+    background-color: $main-bg;
+}
+.bg {
+    background-color: $header-bg-light;
+}
+.bx-experience-section, .bx-news-section, .bx-home {
+    background-color: $main-bg-light !important;
+}
+header {
+    .nav-sec {
+        .navbar-nav {
+            .nav-link {
+                color: #ddd;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+.bx-home {
+    #shape5 {
+        opacity: .09;
+    }
+}
+.navbar-dark {
+    .navbar-toggler {
+        border: 0;
+    }
+}
+
+.bx-home {
+    .basic-details {
+        .info {
+            h1 {
+                color: #fff;
+            }
+            h2 {
+                color: #ddd;
+            }
+            p {
+                color: #999;
+            }
+        }
+    }
+}
+.bx-service-section, .bx-about-section, .bx-experience-section, .bx-portfolio-section, .bx-news-section, .bx-contact-section {
+    .title {
+        h2 {
+            color: #ddd;
+        }
+        .light-txt, p {
+            color: #ddd;
+        }
+    }
+}
+.bx-service-section {
+    .section-card {
+        .card-description {
+            .detailed-txt {
+                border-color: $border;
+                h5 {
+                    color: #ddd;
+                }
+                p {
+                    color: #999;
+                }
+            }
+        }
+    }
+}
+
+.border-bottom {
+    border-color: $border !important;
+}
+.bx-about-section {
+    
+}
+.bx-about-section {
+    .title {
+        p {
+            color: #999;
+        }
+    }
+    .personal-detail {
+        border-color: $border;
+        .info {
+            color: #ddd;
+        }
+        .detail {
+            color: #999;
+        }
+    }
+}
+.timeline-content {
+    background-color: $main-bg;
+}
+.bx-experience-section {
+    .timeline {
+        border-color: $border;
+    }
+}
+.timeline-marker{
+    &:before {
+        background-color: $main-bg;
+    }
+}
+.timeline-info {
+    span {
+        color: #ddd;
+    }
+}
+.timeline-content {
+    p {
+        color: #999;
+    }
+}
+.bx-portfolio-section {
+    .portfolio-tabs {
+        ul {
+            li {
+                color: #ddd;
+            }
+        }
+    }
+}
+.education, .experience {
+    h4 {
+        color: #ddd;
+    }
+}
+.bx-portfolio-section {
+    .hovereffect {
+        border-color: $border;
+    }
+}
+.bx-news-section {
+    .card {
+        background-color: $main-bg;
+    }
+}
+.bx-news-section {
+    .card {
+        .news-card-details {
+            .primary-clr {
+                span {
+                    color: #999;
+                }
+            }
+            h5 {
+                color: #ddd;
+                border-color: $border;
+            }
+        }
+    }
+    .news-right-img {
+        img {
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+}
+.form-control {
+    background-color: $main-bg-light;
+    border-color: $border;
+    color: #999;
+    &:focus {
+        background-color: $main-bg;
+        border-color: $border !important;
+    }
+}
+.bx-contact-section {
+    form {
+        .border-box {
+            border-color: $border;
+        }
+    }
+}
+.bx-contact-section {
+    form {
+        .form-group {
+            textarea {
+                border-color: $border;
+            }
+        }
+    }
+}
+.bx-home{
+    &:after {
+        background-image: url(../img/bg/hero-shape-dark.png);
+    }
+}
+.bx-news-section{
+    &:before {
+        background-image: url(../img/achievement/bg-shape-dark.png);
+    }
+}
+.bx-experience-section {
+    &:before {
+        background-image: url(../img/achievement/bg-shape-dark.png);
+    }
+}
+@media only screen and (max-width: 991px){
+    .navbar-collapse {
+        .navbar-nav {
+            background-color: $main-bg !important;
+            border-color: $border !important;
+        }
+    }
+}

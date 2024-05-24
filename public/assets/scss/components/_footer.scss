@@ -1,0 +1,25 @@
+.bg-clr {
+    padding: 30px;
+    background-color: #070415;
+}
+.bx-footer-detail {
+    display: flex;
+    justify-content: space-between;
+    .bx-copy {
+        color: $white;
+        font-size: 13px;
+        .site-name {
+            color: $white;
+            font-weight: 600;
+        }
+    }
+    .bx-privacy {
+        display: flex;
+        font-size: 13px;
+        a {
+            margin: 0px 15px;
+            color: $white;
+        }
+    }
+}
+

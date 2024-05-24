@@ -1,0 +1,753 @@
+/*---------------------------------------------------------------------------------
+    Responsive css
+-----------------------------------------------------------------------------------*/
+// Utilities ( Import Utilities )
+@import "utilities/_variables";
+@import "utilities/_mixins";
+
+@media only screen and (max-width: 1366px) {
+    .bx-home {
+        &:after {
+            height: 200px;
+        }
+        .basic-details {
+            .info {
+                h1 {
+                    font-size: 55px;
+                }
+            }
+        }
+    }
+    .education,
+    .experience {
+        h4 {
+            font-size: 19px;
+            line-height: 22px;
+        }
+    }
+    .timeline-content {
+        .timeline-title {
+            font-size: 17px;
+            line-height: 20px;
+        }
+    }
+    .portfolio-tabs {
+        ul {
+            li {
+                margin: 0px 5px;
+                font-size: 14px;
+                line-height: 26px;
+            }
+        }
+    }
+    .hovereffect {
+        .portfolio-img {
+            h3 {
+                span {
+                    font-size: 13px;
+                    line-height: 19px;
+                }
+            }
+        }
+    }
+    .bx-service-section, .bx-about-section, .bx-experience-section, .bx-portfolio-section, .bx-news-section, .bx-contact-section {
+        .title {
+            h2 {
+                font-size: 33px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+    header {
+        .navbar-brand {
+            img {
+                width: 80px;
+            }
+        }
+    }
+    .bx-home {
+        &:after {
+            height: 150px;
+        }
+        .basic-details {
+            .info {
+                height: 80vh;
+                h1 {
+                    font-size: 50px;
+                }
+            }
+        }
+    }
+    .bx-about-section {
+        .personal-detail {
+            .info {
+                font-size: 14px;
+            }
+        }
+        .section-card {
+            .sr-no {
+                h6 {
+                    font-size: 40px;
+                }
+            }
+
+            .card-description {
+                .detailed-txt {
+                    h5 {
+                        font-size: 17px;
+                    }
+
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .sec-img {
+            height: 100%;
+            img {
+                position: sticky;
+                top: 70px;
+            }
+        }
+    }
+    .bx-service-section {
+        .section-card {
+            .card-description {
+                .detailed-txt {
+                    h5{
+                        font-size: 18px;
+                    }
+                }
+            }
+            .sr-no h6 {
+                padding-right: 20px;
+                font-size: 40px;
+            }
+        }
+        .personal-detail {
+            padding: 25px 20px;
+
+            .pb {
+                padding-bottom: 10px;
+            }
+
+            .info {
+                font-size: 15px;
+                line-height: 28px;
+            }
+
+            .detail {
+                font-size: 12px;
+                line-height: 28px;
+            }
+        }
+
+    }
+    .navbar-nav {
+        .nav-item {
+            a {
+                font-size: 13px;
+            }
+        }
+    }
+    .bx-experience-section {
+        .education {
+            h4 {
+                font-size: 18px;
+            }
+        }
+        .experience {
+            h4 {
+                font-size: 18px;
+            }
+        }
+        .timeline {
+            .timeline-item {
+                .timeline-content {
+                    .timeline-info {
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                    .timeline-title {
+                        font-size: 16px;
+                        .sub {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bx-portfolio-section {
+        .hovereffect {
+            &:hover {
+                .info {
+                    .fa-arrow-right {
+                        padding: 6px;
+                    }
+                }
+            }
+        }
+    }
+    .bx-news-section {
+        .news-slider {
+            max-width: 600px;
+        }
+    }
+    .bx-service-section, .bx-about-section, .bx-experience-section, .bx-portfolio-section, .bx-news-section, .bx-contact-section {
+        .title {
+            h2 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 13px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .bx-home {
+
+        &:after {
+            height: 180px;
+        }
+
+        .basic-details {
+            .info {
+                .primary-color {
+                    font-size: 16px;
+                }
+
+                h1 {
+                    font-size: 45px;
+                }
+
+                h2 {
+                    font-size: 15px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .profile-img {
+            &:after {
+                width: 280px;
+                height: 350px;
+                top: 200px;
+                left: 60px;
+            }
+        }
+    }
+    .navbar-dark {
+        .navbar-toggler {
+            padding: 0;
+            color: $black;
+            i {
+                color: $text-color;
+            }
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+        form {
+            display: none;
+        }
+        .custom-btn {
+            display: none;
+        }
+    }
+    .navbar-collapse {
+        .navbar-nav {
+            margin: 15px 0 !important;
+            padding: 15px;
+            background: $white;
+            border-radius: $border-radius-30;
+            border: 1px solid $eee;
+        }
+    }
+    .bx-about-section {
+        .title {
+            &:after {
+                top: 50px;
+                left: 50px;
+            }
+
+            &:before {
+                top: 50px;
+                right: 50px;
+            }
+            h2 {
+                margin-bottom: 15px;
+            }
+        }
+        .sec-img {
+            img {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .bx-experience-section {
+        .timeline {
+            .timeline-item {
+                .timeline-content {
+                    min-height: 200px;
+                }
+            }
+        }
+    }
+    .bx-service-section {
+        .row {
+            margin-bottom: -30px;
+            .col-lg-4.col-md-12 {
+                &:not(:last-child){
+                    margin-bottom: 30px;
+                }
+            }
+        }
+        .sec-img {
+            margin-bottom: 30px;
+
+            &:before {
+                display: none;
+            }
+        }
+        .section-card {
+            .sr-no {
+                h6 {
+                    width: 60px;
+                    font-size: 35px;
+                }
+            }
+            .card-description {
+                .detailed-txt {
+                    padding-top: 20px;
+                }
+            }
+        }
+        .border-bottom {
+            display: none;
+        }
+    }
+    .bx-news-section {
+        .news-right-img {
+            img {
+              display: none;
+            }
+          }
+          .news-slider {
+            max-width: 100%;
+            position: unset;
+            transform: none;
+        }
+    }
+    .bx-service-section, .bx-about-section, .bx-experience-section, .bx-portfolio-section, .bx-news-section, .bx-contact-section {
+        .title {
+            h2 {
+                font-size: 26px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .padding-tb-80 {
+        padding: 70px 0;
+    }
+    .padding-t-80 {
+        padding-top: 70px;
+    }
+    .padding-b-80 {
+        padding-bottom: 70px;
+    }
+    .bx-home {
+
+        &:after {
+            height: 150px;
+        }
+
+        .profile-img {
+            display: none;
+        }
+
+        .basic-details {
+            .info {
+                height: 60vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+    }
+    .bx-about-section {
+        .title {
+            padding-top: 20px;
+        }
+    }
+    .bx-about-section {
+        .title {
+            &:after {
+                top: 0px;
+                left: 0px;
+            }
+
+            &:before {
+                top: 0px;
+                right: 0px;
+            }
+        }
+    }
+    .bx-service-section {
+        .title {
+            h2 {
+                text-align: center;
+            }
+        }
+    }
+    .bx-portfolio-section {
+        .title {
+            text-align: center;
+        }
+        .portfolio-tabs {
+            margin-bottom: 30px;
+            text-align: center;
+
+            ul {
+                li {
+                    margin: 0;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .bx-experience-section {
+        &:before {
+            height: 90px;
+        }    
+        .title {
+            padding-top: 20px;
+        }
+    }
+    .bx-news-section {
+        overflow: hidden;
+        &:before {
+            height: 90px;
+        }    
+        .title {
+            padding-top: 20px;
+        }
+        .card {
+            .news-card-details {
+                h5 {
+                    font-size: 15px;
+                }
+                .primary-clr {
+                    font-size: 12px;
+                    line-height: 10px;
+                    span {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .read-more-btn {
+                font-size: 12px;
+            }
+        }
+    
+    }
+    .box-front {
+        .content-wrap {
+            h3 {
+                font-size: 17px;
+                line-height: 20px;
+            }
+        }
+    }
+    .education,
+    .experiense {
+        h4 {
+            font-size: 16px;
+            line-height: 18px;
+        }
+    }
+    .bg-clr {
+        padding: 0;
+        .bx-footer-detail {
+            flex-direction: column;
+            .bx-privacy {
+                justify-content: space-around;
+            }
+            .bx-copy {
+                padding: 5px 0;
+                text-align: center;
+                margin-bottom: 16px;
+            }
+        }
+    }
+    .bx-service-section, .bx-about-section, .bx-experience-section, .bx-portfolio-section, .bx-news-section, .bx-contact-section {
+        .title {
+            h2 {
+                font-size: 24px;
+            }
+        }
+    }
+    .bx-contact-section {
+        form {
+            .form-group {
+                textarea {
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+    footer.footer.bg-clr {
+        padding: 30px 0;
+    }
+    .bg-clr {
+        .bx-footer-detail {
+            
+        .bx-copy {
+            padding: 0;
+        }
+            .bx-privacy {
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .bx-home {
+        #shape2 {
+            left: 60px;
+        }
+
+        &:after {
+            height: 120px;
+        }
+
+        .profile-img {
+            max-width: 220px;
+
+            &:after {
+                width: 130px;
+                height: 130px;
+            }
+        }
+
+        .basic-details {
+            justify-content: center;
+            display: flex;
+            .info {
+                padding: 0 15px;
+                h1 {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    .bx-about-section {
+        .title {
+            text-align: center;
+        }
+    }
+    .nav-sec {
+        .container-fluid {
+            padding: 0;
+        }
+    }
+    .section-title {
+        padding-bottom: 30px;
+
+        h2 {
+            font-size: 24px;
+            line-height: 26px;
+        }
+    }
+    .bx-service-section, .bx-about-section, .bx-experience-section, .bx-portfolio-section, .bx-news-section, .bx-contact-section {
+        .title {
+            h2 {
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .bx-home {
+        .profile-img {
+            &:after {
+                width: 105px;
+                height: 105px;
+            }
+        }
+       
+        .basic-details {
+            .info {
+                h1 {
+                    font-size: 36px;
+                    line-height: 32px;
+                }
+
+                h2 {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+                .primary-color {
+                    line-height: 50px;
+                }
+            }
+           
+        }
+
+        .bx-btn,
+        .bx-btn-1 {
+            font-size: 13px;
+        }
+
+        .custom-btn {
+            width: 120px;
+            height: 36px;
+        }
+    }
+    .bx-about-section {
+        .title {
+            h2 {
+                font-size: 30px;
+            }
+            &:after {
+                top: 0;
+                left: 0;
+            }
+            &:before {
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+    .bx-service-section {
+        .title {
+            h2 {
+                font-size: 30px;
+                text-align: center;
+            }
+        }
+    }
+    .bx-experience-section  {
+        .title {
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
+    .bx-portfolio-section {
+        .title {
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
+    .bx-news-section {
+        .title {
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
+    .bx-contact-section {
+        .title {
+            h2 {
+                font-size: 30px;
+            }
+        }
+    }
+    .bx-service-section, .bx-about-section, .bx-experience-section, .bx-portfolio-section, .bx-news-section, .bx-contact-section {
+        .title {
+            h2 {
+                font-size: 20px;
+            }
+        }
+    }
+    .bx-service-section {
+        .section-card {
+            .sr-no {
+                display: none;
+            }
+        }
+    }
+    .bx-about-section {
+        .personal-detail {
+            .content {
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .bx-home {
+        &:after {
+            height: 100px;
+        }
+        .basic-details {
+            .info {
+                .buttons {
+                    display: block;
+
+                    a:last-child {
+                        margin-top: 25px;
+                    }
+                }
+            }
+        }
+
+        .profile-img {
+            &:after {
+                width: 88px;
+                height: 90px;
+            }
+            .profile-detail {
+                &:after {
+                    top: 10%;
+                    left: 14%;
+                }
+            }
+        }
+    }
+    .bx-service-section {
+        .personal-detail {
+            .content {
+                display: block;
+            }
+        }
+    }
+    .bx-footer-detail {
+        .bx-privacy {
+            a {
+                margin: 0px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .bx-home {
+        .basic-details {
+            .info {
+                h1 {
+                    font-size: 30px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,227 @@
+/*===== Hero section css =====*/
+.bx-home {
+  &:after {
+    content: "";
+    width: 100%;
+    height: 250px;
+    background-image: url(../img/bg/hero-shape.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    z-index: 5;
+  }
+  .parallax {
+    position: absolute;
+    z-index: 3;
+  }
+  #shape1,
+  #shape2,
+  #shape3,
+  #shape4,
+  #shape5,
+  #shape6,
+  #shape7 {
+    opacity: 0.7;
+  }
+  #shape1 {
+    width: 50px;
+    left: 400px;
+    bottom: 150px;
+  }
+  #shape2 {
+    width: 50px;
+    top: 250px;
+    right: 0px;
+  }
+  #shape3 {
+    width: 50px;
+    top: 150px;
+    left: 440px;
+  }
+  #shape4 {
+    width: 20px;
+    bottom: 450px;
+    left: 0px;
+  }
+  #shape5 {
+    width: 50px;
+    bottom: 175px;
+    right: 0px;
+  }
+}
+.bx-home {
+  width: 100%;
+  background-color: #f6f8ff !important;
+  overflow: hidden;
+
+  .container,
+  .container-fluid {
+    height: 100%;
+    position: relative;
+    z-index: 5;
+  }
+  .profile-img {
+    height: 100%;
+    padding: 0 15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    .profile-detail {
+      display: flex;
+      align-items: center;
+      img {
+        width: 100%;
+        z-index: 1;
+      }
+    }
+  }
+  .basic-details {
+    .info {
+      max-width: 500px;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .primary-color {
+        color: $main-primary-color;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 700;
+      }
+      h1 {
+        margin: 0;
+        color: $black;
+        font-size: 60px;
+      }
+      h2 {
+        margin-top: 15px;
+        margin-bottom: 0;
+        color: $black;
+        font-size: 20px;
+        line-height: 28px;
+        text-transform: capitalize;
+        font-weight: 700;
+      }
+      p {
+        margin: 20px 0 30px 0;
+        font-size: 16px;
+        color: #777;
+        line-height: 28px;
+        letter-spacing: 0.02rem;
+      }
+    }
+  }
+  @-moz-keyframes scrollDownAnimation {
+    0% {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+      transform: translate(0, 20px);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-webkit-keyframes scrollDownAnimation {
+    0% {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+      transform: translate(0, 20px);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @-o-keyframes scrollDownAnimation {
+    0% {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+      transform: translate(0, 20px);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes scrollDownAnimation {
+    0% {
+      opacity: 0;
+      transform: translate(0, 0);
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 0;
+      transform: translate(0, 20px);
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes bg-move {
+    0% {
+      background-position: left;
+      background-size: 100% 100%;
+      // transform: scale(1);
+    }
+    30% {
+      background-position: right;
+      // transform: scale(1.5);
+      background-size: 125% 125%;
+    }
+    60% {
+      background-position: left;
+      // transform: scale(1.5);
+      background-size: 125% 125%;
+    }
+    100% {
+      background-position: right;
+      background-size: 100% 100%;
+      // transform: scale(1);
+    }
+  }
+}
+.bx-home-water {
+  &:after {
+    background: none !important;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+  }
+}
+.bx-home-snow {
+  background-attachment: fixed !important;
+  overflow: hidden;
+  &:after {
+    content: none !important;
+  }
+  #canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+.bx-home-insect {
+  animation: bg-move 30s infinite;
+  &:after {
+    content: none !important;
+  }
+}
