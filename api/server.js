@@ -17,6 +17,15 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
 
+//add hello api on '/'
+
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+
+// Endpoint to fetch portfolio data
+
+
 app.get('/api', async (req, res) => {
     try {
         const response = await axios.get('https://api.jsonbin.io/v3/b/664f9679ad19ca34f86e10bc', {
