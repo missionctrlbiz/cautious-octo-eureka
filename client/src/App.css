@@ -1,0 +1,47 @@
+.carousel-wrap .slick-slide {
+    margin: 0 2px 0 0; 
+  }
+
+.bx-contact-section form.form-light .form-group input,
+.bx-contact-section form.form-light .form-group textarea {
+  border-color: #dfdfdf;
+  color: #a5a3b3;
+  background-color: #fff;
+}
+
+.bg {
+  background-color: #1d1a29;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+.padding-top{
+  padding-top: 80px;
+}
+.margin-right{
+  margin-right: 20px;
+}
+@media only screen and (max-width: 600px) {
+  .margin-right{
+    margin-right: 0px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .margin-right{
+    margin:  0 5px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .margin-right{
+    margin:  0 5px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .margin-right{
+    margin-right: 20px;
+  }
+}
+
+

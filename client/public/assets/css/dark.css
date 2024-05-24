@@ -1,0 +1,157 @@
+/**  Dark css  **/
+body, section {
+  background-color: #120f1c;
+}
+
+.bg {
+  background-color: #1d1a29;
+}
+
+.bx-experience-section, .bx-news-section, .bx-home {
+  background-color: #161321 !important;
+}
+
+header .nav-sec .navbar-nav .nav-link {
+  color: #ddd;
+}
+header .nav-sec .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+.bx-home #shape5 {
+  opacity: 0.09;
+}
+
+.navbar-dark .navbar-toggler {
+  border: 0;
+}
+
+.bx-home .basic-details .info h1 {
+  color: #fff;
+}
+.bx-home .basic-details .info h2 {
+  color: #ddd;
+}
+.bx-home .basic-details .info p {
+  color: #999;
+}
+
+.bx-service-section .title h2, .bx-about-section .title h2, .bx-experience-section .title h2, .bx-portfolio-section .title h2, .bx-news-section .title h2, .bx-contact-section .title h2 {
+  color: #ddd;
+}
+.bx-service-section .title .light-txt, .bx-service-section .title p, .bx-about-section .title .light-txt, .bx-about-section .title p, .bx-experience-section .title .light-txt, .bx-experience-section .title p, .bx-portfolio-section .title .light-txt, .bx-portfolio-section .title p, .bx-news-section .title .light-txt, .bx-news-section .title p, .bx-contact-section .title .light-txt, .bx-contact-section .title p {
+  color: #ddd;
+}
+
+.bx-service-section .section-card .card-description .detailed-txt {
+  border-color: #27213b;
+}
+.bx-service-section .section-card .card-description .detailed-txt h5 {
+  color: #ddd;
+}
+.bx-service-section .section-card .card-description .detailed-txt p {
+  color: #999;
+}
+
+.border-bottom {
+  border-color: #27213b !important;
+}
+
+.bx-about-section .title p {
+  color: #999;
+}
+.bx-about-section .personal-detail {
+  border-color: #27213b;
+}
+.bx-about-section .personal-detail .info {
+  color: #ddd;
+}
+.bx-about-section .personal-detail .detail {
+  color: #999;
+}
+
+.timeline-content {
+  background-color: #120f1c;
+}
+
+.bx-experience-section .timeline {
+  border-color: #27213b;
+}
+
+.timeline-marker:before {
+  background-color: #120f1c;
+}
+
+.timeline-info span {
+  color: #ddd;
+}
+
+.timeline-content p {
+  color: #999;
+}
+
+.bx-portfolio-section .portfolio-tabs ul li {
+  color: #ddd;
+}
+
+.education h4, .experience h4 {
+  color: #ddd;
+}
+
+.bx-portfolio-section .hovereffect {
+  border-color: #27213b;
+}
+
+.bx-news-section .card {
+  background-color: #120f1c;
+}
+
+.bx-news-section .card .news-card-details .primary-clr span {
+  color: #999;
+}
+.bx-news-section .card .news-card-details h5 {
+  color: #ddd;
+  border-color: #27213b;
+}
+.bx-news-section .news-right-img img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.form-control {
+  background-color: #161321;
+  border-color: #27213b;
+  color: #999;
+}
+.form-control:focus {
+  background-color: #120f1c;
+  border-color: #27213b !important;
+}
+
+.bx-contact-section form .border-box {
+  border-color: #27213b;
+}
+
+.bx-contact-section form .form-group textarea {
+  border-color: #27213b;
+}
+
+.bx-home:after {
+  background-image: url(../img/bg/hero-shape-dark.png);
+}
+
+.bx-news-section:before {
+  background-image: url(../img/achievement/bg-shape-dark.png);
+}
+
+.bx-experience-section:before {
+  background-image: url(../img/achievement/bg-shape-dark.png);
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-collapse .navbar-nav {
+    background-color: #120f1c !important;
+    border-color: #27213b !important;
+  }
+}
+/*# sourceMappingURL=dark.css.map */

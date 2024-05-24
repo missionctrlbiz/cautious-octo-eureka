@@ -1,0 +1,79 @@
+/*===== About css =====*/
+.bx-about-section {
+  .title {
+		.light-txt {
+			margin-bottom: 5px;
+			font-size: 14px;
+			color: #777;
+			text-transform: uppercase;
+		}
+		h2 {
+			margin-bottom: 30px;
+			font-size: 35px;
+			font-weight: 700;
+			.primary-clr {
+				color: $main-primary-color;
+			}
+		}
+		p {
+			margin-bottom: 30px;
+      color: $text-color;
+		}
+	}
+
+  .personal-detail {
+		padding: 30px;
+		border: 1px solid #dee2e6;
+    	border-radius: 15px;
+		.content {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.info {
+			font-size: 16px;
+			font-weight: 700;
+			line-height: 28px;
+		}
+		.pb {
+			padding-bottom: 20px;
+			display: flex;
+			flex-direction: column;
+		}
+		.detail {
+			font-size: 14px;
+			line-height: 28px;
+      color: $text-color;
+		}
+	}
+  .sec-img {
+		&:before {
+			content: "";
+			background-image: url(../img/about/shape-2.png);
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			top: 0px;
+			left: 10px;
+		}
+		&:after {
+			content: "";
+			background-image: url(../img/service/shape.png);
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			bottom: 0px;
+			right: 10px;
+		}
+		img {
+			width: 100%;
+			border-radius: 15px;
+		}
+	}
+}

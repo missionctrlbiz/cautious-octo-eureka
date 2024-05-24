@@ -1,0 +1,93 @@
+/*===== Service css =====*/
+.bx-service-section {
+  .title {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &:after {
+      content: "";
+      background-image: url(../img/about/shape-1.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+    }
+    &:before {
+      content: "";
+        background-image: url(../img/about/shape-2.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 100px;
+      right: 100px;
+    }
+
+    .light-txt {
+      margin-bottom: 5px;
+      font-size: 14px;
+      color: #777;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 35px;
+      font-weight: 700;
+
+      span {
+        color: $main-primary-color;
+        text-transform: capitalize;
+      }
+    }
+  }
+  .section-card {
+    font-family: $font-family-quicksand;
+    display: flex;
+
+    .sr-no {
+      h6 {
+        font-size: 50px;
+        font-weight: 700;
+        color: $main-primary-color;
+        padding-right: 30px;
+        opacity: 0.5;
+      }
+    }
+
+    .card-description {
+      img {
+        padding-left: 30px;
+        border-left: 1px solid $main-primary-color;
+      }
+
+      .detailed-txt {
+        padding-top: 30px;
+        padding-left: 30px;
+        border-left: 1px solid #dbdada;
+
+        h5 {
+          font-size: 20px;
+          font-weight: 700;
+        }
+
+        p {
+          margin: 0;
+          font-size: 15px;
+          color: $text-color;
+        }
+      }
+    }
+  }
+  .border-bottom {
+    padding-top: 80px;
+  }
+}

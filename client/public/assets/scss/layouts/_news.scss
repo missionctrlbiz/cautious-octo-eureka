@@ -1,0 +1,174 @@
+/*===== Resume css (EXPERIENCE & EDUCATION)=====*/
+.bx-news-section {
+  background-color: #f6f8ff;
+
+  &:before {
+    content: "";
+    background-image: url(../img/achievement/bg-shape.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+  }
+  .owl-stage-outer {
+    margin: -15px;
+    padding: 15px;
+  }
+  .title {
+    padding-top: 80px;
+    text-align: center;
+
+    p {
+      margin-bottom: 5px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $text-color;
+    }
+
+    h2 {
+      margin-bottom: 30px;
+      font-size: 35px;
+      font-weight: 700;
+
+      .primary-clr {
+        color: $main-primary-color;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .shape-1 {
+    &:before {
+      content: "";
+      background-image: url(../img/service/shape.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 20%;
+      right: 10%;
+    }
+
+    &:after {
+      content: "";
+      background-image: url(../img/about/shape-1.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 20%;
+      left: 10%;
+    }
+  }
+
+  .shape-2 {
+    &:before {
+      content: "";
+      background-image: url(../img/bg/shape-3.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      bottom: 20%;
+      left: 10%;
+    }
+
+    &:after {
+      content: "";
+      background-image: url(../img/bg/shape-1.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      bottom: 20%;
+      right: 10%;
+    }
+  }
+
+  .right-content {
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+  }
+
+  .card {
+    padding: 20px;
+    border-radius: 15px;
+    // box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.11);
+
+    .read-more-btn {
+      margin-top: 15px;
+      font-size: 14px;
+      color: $main-primary-color;
+      line-height: 1;
+      i {
+        color: $main-primary-color;
+      }
+    }
+
+    .news-card-img {
+      img {
+        border-radius: 15px;
+        position: relative;
+        z-index: 0;
+      }
+    }
+
+    .news-card-details {
+      img {
+        margin-bottom: 15px;
+        border-radius: 15px;
+      }
+      .primary-clr {
+        margin-bottom: 5px;
+        font-size: 13px;
+        line-height: 30px;
+        color: $main-primary-color;
+        span {
+          font-size: 13px;
+          color: #777;
+        }
+      }
+
+      h5 {
+        padding-bottom: 15px;
+        font-size: 17px;
+        font-weight: 700;
+        border-bottom: 1px solid #dbdada;
+      }
+    }
+  }
+
+  .bx-news-detail {
+    position: relative;
+  }
+
+  .news-slider {
+    max-width: 800px;
+    position: absolute;
+    left: -27;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .news-right-img {
+    img {
+      width: 100%;
+    }
+  }
+}
+/** End event Section **/

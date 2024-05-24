@@ -1,0 +1,186 @@
+/*===== Resume css (EXPERIENCE & EDUCATION)=====*/
+.education,
+.experience {
+  h4 {
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    color: $title-color;
+  }
+}
+.bx-experience-section {
+  background-color: #f6f8ff;
+  &:before {
+    content: "";
+    background-image: url(../img/achievement/bg-shape.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 160px;
+  }
+  .title {
+    text-align: center;
+    p {
+      padding-top: 80px;
+      margin-bottom: 5px;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $text-color;
+    }
+    h2 {
+      margin-bottom: 30px;
+      font-size: 35px;
+      font-weight: 700;
+      .primary-clr {
+        color: $main-primary-color;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .shape-1 {
+    &:before {
+      content: "";
+      background-image: url(../img/achievement/shape-1.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 20%;
+      right: 10%;
+    }
+    &:after {
+      content: "";
+      background-color: #f1c7a1;
+      height: 50px;
+      width: 50px;
+      border-radius: 100%;
+      box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.11);
+      position: absolute;
+      top: 20%;
+      left: 10%;
+    }
+  }
+  .shape-2 {
+    &:before {
+      content: "";
+      background-image: url(../img/achievement/shape-2.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      bottom: 20%;
+      left: 10%;
+    }
+    &:after {
+      content: "";
+      background-image: url(../img/about/shape-2.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      bottom: 20%;
+      right: 10%;
+    }
+  }
+  .timeline {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+    list-style: none;
+    position: relative;
+    border-left: 2px solid #dee2e6;
+    .timeline-item {
+      padding-left: 24px;
+      position: relative;
+    }
+    li {
+      margin: 0;
+    }
+  }
+}
+.timeline-info {
+  span {
+    font-size: 12px;
+    font-weight: 500;
+    color: $text-color;
+  }
+}
+.timeline-marker {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+  &:before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border: 2px solid $main-primary-color;
+    border-radius: 100%;
+    display: block;
+    background-color: #f6f8ff;
+    position: absolute;
+    top: 99px;
+    left: -9px;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+    z-index: -1;
+  }
+  &:after {
+    content: "";
+    width: 20px;
+    border: 1px solid $main-primary-color;
+    border-radius: 100%;
+    display: block;
+    background-color: #f6f8ff;
+    position: absolute;
+    top: 106px;
+    left: 7px;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+    z-index: -1;
+  }
+}
+.timeline-item {
+  &:last-child,
+  &:after {
+    content: none;
+  }
+}
+
+.timeline-content {
+  margin-bottom: 30px;
+  padding: 30px;
+  border-radius: 15px;
+  background-color: $white;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.06);
+  .timeline-title {
+    margin-top: 15px;
+    color: $main-primary-color;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    .sub {
+      margin-left: 15px;
+      color: $text-color-999;
+      font-size: 14px;
+    }
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 13px;
+    color: $text-color;
+  }
+}

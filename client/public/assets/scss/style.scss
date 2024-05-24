@@ -1,0 +1,51 @@
+/**------------------------------------------------------
+Item Name: Borox - Personal Portfolio HTML Template.
+Author: ashishmaraviya
+Version: 2
+Copyright 2023
+-----------------------------------------------------------**/
+/*------------------------------------------------------------------
+[Table of contents]
+
+01. Typography
+02. Components
+    - Common
+    - Header
+    - Footer
+03. Layouts
+    - Home
+    - About
+    - Service
+    - Experience
+    - Portfolio
+    - News
+    - Contact
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+# [Color codes]
+
+Template contains couple color like:
+$main-primary-color : #7963e0;
+
+# */
+@charset "charset";
+// Typography ( Import Typography )
+@import "base/_typography";
+
+// Utilities ( Import Utilities )
+@import "utilities/_variables";
+@import "utilities/_mixins";
+
+// Components ( Import Utilities )
+@import "components/_common";
+@import "components/_header";
+@import "components/_footer";
+
+// Layouts ( Import Utilities )
+@import "layouts/_home";
+@import "layouts/_about";
+@import "layouts/_service";
+@import "layouts/_experience";
+@import "layouts/_portfolio";
+@import "layouts/_news";
+@import "layouts/_contact";
