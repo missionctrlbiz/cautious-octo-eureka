@@ -9,11 +9,13 @@ const PORT = process.env.PORT || 5000;
 
 // CORS Configuration
 const corsOptions = {
-    origin: 'https://cautious-octo-eureka-ydck.vercel.app/', 
+    origin: 'http://localhost:3000', 
     method: ["POST", "GET"],
     credentials: true,
     optionsSuccessStatus: 200
 };
+
+
 app.use(cors(corsOptions));
 
 
@@ -30,7 +32,7 @@ app.get('/api/portfolio', async (req, res) => {
         });
 
         // Set CORS headers
-        res.setHeader('Access-Control-Allow-Origin', 'https://cautious-octo-eureka-ydck.vercel.app');
+        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
         res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
         res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
         res.setHeader('Access-Control-Allow-Credentials', true);

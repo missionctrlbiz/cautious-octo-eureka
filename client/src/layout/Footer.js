@@ -36,15 +36,15 @@ function Footer() {
     // Fetch data from API
     const fetchData = async () => {
       try {
-          const response = await axios.get('https://cautious-octo-eureka.vercel.app/api/portfolio'); // Update the URL to your Express server
-          setData(response.data);
+        const response = await axios.get('http://localhost:5000/api/portfolio'); // Update the URL to your Express server
+        setData(response.data);
       } catch (error) {
-          console.error('Error fetching data:', error);
+        console.error('Error fetching data:', error);
       }
-  };
+    };
 
-  fetchData();
-}, []);
+    fetchData();
+  }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -67,7 +67,7 @@ function Footer() {
             <div className="bx-copy">
               Copyright &copy; {currentYear} <a onClick={(e) => handleSubmit(e)} className="site-name" href="/">
                 {data?.record?.name || 'Loading...'} {/* Display fetched name or loading text */}
-              </a> All rights reserved. <br/>
+              </a> All rights reserved. <br />
               Powered by <Link to="https://instagram.com/missionctrl.biz">MissionCTRL Creative Labs</Link>
             </div>
           </div>

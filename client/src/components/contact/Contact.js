@@ -32,7 +32,7 @@ function Contact() {
         const errors = validateForm();
         if (Object.keys(errors).length === 0) {
             try {
-                const response = await fetch('https://cautious-octo-eureka.vercel.app/api/send-email', {
+                const response = await fetch('http://localhost:5000/api/send-email', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -109,54 +109,54 @@ function Contact() {
                             <Fade triggerOnce duration={2000} direction='up' delay={300} className="col-md-6">
                                 <div className="border-box">
                                     <div className="form-group">
-                                        <input 
-                                            type="text" 
-                                            className="form-control" 
-                                            name="fullName" 
-                                            autoComplete="off" 
-                                            value={formData.fullName} 
-                                            onChange={handleChange} 
-                                            placeholder="Full Name" 
-                                            required 
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            name="fullName"
+                                            autoComplete="off"
+                                            value={formData.fullName}
+                                            onChange={handleChange}
+                                            placeholder="Full Name"
+                                            required
                                         />
                                         {formErrors.fullName && <span className="error">{formErrors.fullName}</span>}
                                     </div>
                                     <div className="form-group">
-                                        <input 
-                                            type="email" 
-                                            className="form-control" 
-                                            name="email" 
-                                            autoComplete="off" 
-                                            value={formData.email} 
-                                            onChange={handleChange} 
-                                            placeholder="Email" 
-                                            required 
+                                        <input
+                                            type="email"
+                                            className="form-control"
+                                            name="email"
+                                            autoComplete="off"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            placeholder="Email"
+                                            required
                                         />
                                         {formErrors.email && <span className="error">{formErrors.email}</span>}
                                     </div>
                                     <div className="form-group">
-                                        <input 
-                                            type="text" 
-                                            className="form-control" 
-                                            name="phone" 
-                                            autoComplete="off" 
-                                            value={formData.phone} 
-                                            onChange={handleChange} 
-                                            placeholder="Phone" 
-                                            required 
+                                        <input
+                                            type="text"
+                                            className="form-control"
+                                            name="phone"
+                                            autoComplete="off"
+                                            value={formData.phone}
+                                            onChange={handleChange}
+                                            placeholder="Phone"
+                                            required
                                         />
                                         {formErrors.phone && <span className="error">{formErrors.phone}</span>}
                                     </div>
                                     <div className="form-group">
-                                        <input 
-                                            type="text" 
-                                            className="form-control border-none" 
-                                            autoComplete="off" 
-                                            name="subject" 
-                                            value={formData.subject} 
-                                            onChange={handleChange} 
-                                            placeholder="Subject" 
-                                            required 
+                                        <input
+                                            type="text"
+                                            className="form-control border-none"
+                                            autoComplete="off"
+                                            name="subject"
+                                            value={formData.subject}
+                                            onChange={handleChange}
+                                            placeholder="Subject"
+                                            required
                                         />
                                         {formErrors.subject && <span className="error">{formErrors.subject}</span>}
                                     </div>
@@ -164,13 +164,13 @@ function Contact() {
                             </Fade>
                             <Fade triggerOnce duration={2000} direction='up' delay={300} className="col-md-6">
                                 <div className="form-group">
-                                    <textarea 
-                                        className="form-control" 
-                                        name="message" 
-                                        value={formData.message} 
-                                        onChange={handleChange} 
-                                        rows="7" 
-                                        placeholder="Message" 
+                                    <textarea
+                                        className="form-control"
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        rows="7"
+                                        placeholder="Message"
                                         required
                                     ></textarea>
                                     {formErrors.message && <span className="error">{formErrors.message}</span>}
