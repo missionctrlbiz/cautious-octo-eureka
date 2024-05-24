@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 
 // CORS Configuration
 const corsOptions = {
-    origin: 'http://localhost:3000', // Replace with the appropriate origin for your frontend
+    origin: 'https://cautious-octo-eureka.vercel.app/', 
     optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
