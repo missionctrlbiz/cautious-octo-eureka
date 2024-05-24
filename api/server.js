@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 
 // CORS Configuration
 const corsOptions = {
-    origin: 'http://localhost:3000', 
+    origin: 'https://silencecoderr-portfolio.vercel.app', 
     method: ["POST", "GET"],
     credentials: true,
     optionsSuccessStatus: 200
@@ -32,7 +32,7 @@ app.get('/api/portfolio', async (req, res) => {
         });
 
         // Set CORS headers
-        res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+        res.setHeader('Access-Control-Allow-Origin', 'https://silencecoderr-portfolio.vercel.app');
         res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
         res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
         res.setHeader('Access-Control-Allow-Credentials', true);

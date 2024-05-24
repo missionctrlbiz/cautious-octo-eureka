@@ -10,7 +10,7 @@ function About() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/portfolio'); // Update the URL to your Express server
+                const response = await axios.get('https://silencecoderr-portfolio-api.vercel.app/api/portfolio'); // Update the URL to your Express server
                 setData(response.data);
             } catch (error) {
                 console.error('Error fetching data:', error);
