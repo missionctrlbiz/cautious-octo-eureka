@@ -19,7 +19,6 @@ app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 
-
 // Endpoint to fetch portfolio data
 app.get('/api/portfolio', async (req, res) => {
     try {
@@ -29,12 +28,21 @@ app.get('/api/portfolio', async (req, res) => {
                 'X-MASTER-KEY': '$2a$10$hGEua.fk2zjUH4ho80nmcuTDtW5dGXptKgrifYfbS9SwjJTfxoJ6K'
             }
         });
+
+        // Set CORS headers
+        res.setHeader('Access-Control-Allow-Origin', 'https://cautious-octo-eureka-ydck.vercel.app');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+        res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+        res.setHeader('Access-Control-Allow-Credentials', true);
+
+        // Send response
         res.json(response.data);
     } catch (error) {
         console.error('Error fetching data:', error);
         res.status(500).json({ error: 'Failed to fetch data from API' });
     }
 });
+
 
 app.post('/api/send-email', async (req, res) => {
     const { fullName, email, phone, subject, message } = req.body;
