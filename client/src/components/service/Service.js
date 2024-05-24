@@ -8,7 +8,7 @@ function Service() {
         // Replace with your actual API endpoint
         const fetchServices = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/portfolio');
+                const response = await fetch('https://silencecoderr-portfolio-api.vercel.app/api/portfolio');
                 const data = await response.json();
                 setServices(data.record.services); // Adjust based on your API response structure
             } catch (error) {

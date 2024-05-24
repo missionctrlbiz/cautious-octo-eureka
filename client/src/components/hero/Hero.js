@@ -19,7 +19,7 @@ function Hero() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/portfolio'); // Replace with your actual API endpoint
+                const response = await axios.get('https://silencecoderr-portfolio-api.vercel.app/api/portfolio'); // Replace with your actual API endpoint
                 setHeroData(response.data.record);
             } catch (error) {
                 console.error('Error fetching data', error);
