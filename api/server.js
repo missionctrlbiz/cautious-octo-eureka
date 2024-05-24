@@ -8,7 +8,7 @@ const app = express();
 
 // CORS Configuration
 const corsOptions = {
-    origin: 'https://silencecoderr-portfolio.vercel.app/', 
+    origin: 'https://silencecoderr-portfolio.vercel.app', 
     methods: ['GET', 'POST'],
     credentials: true,
     optionsSuccessStatus: 200
@@ -34,10 +34,10 @@ app.get('/api', async (req, res) => {
                 'X-MASTER-KEY': '$2a$10$hGEua.fk2zjUH4ho80nmcuTDtW5dGXptKgrifYfbS9SwjJTfxoJ6K'
             }
         });
-        res.setHeader('Access-Control-Allow-Origin', 'https://silencecoderr-portfolio.vercel.app');
-        res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
-        res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-        res.setHeader('Access-Control-Allow-Credentials', true);
+        // res.setHeader('Access-Control-Allow-Origin', 'https://silencecoderr-portfolio.vercel.app');
+        // res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
+        // res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+        // res.setHeader('Access-Control-Allow-Credentials', true);
         res.json(response.data);
     } catch (error) {
         console.error('Error fetching data:', error);
