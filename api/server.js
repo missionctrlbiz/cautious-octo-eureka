@@ -7,25 +7,15 @@ const cors = require('cors');
 const app = express();
 
 // CORS Configuration
-const corsOptions = {
-    origin: '*', 
-    methods: ['GET', 'POST'],
-    credentials: true,
-    optionsSuccessStatus: 200
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(bodyParser.json());
 
-//add hello api on '/'
-
+// Add hello api on '/'
 app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 
 // Endpoint to fetch portfolio data
-
-
 app.get('/api', async (req, res) => {
     try {
         const response = await axios.get('https://api.jsonbin.io/v3/b/664f9679ad19ca34f86e10bc', {
@@ -34,7 +24,7 @@ app.get('/api', async (req, res) => {
                 'X-MASTER-KEY': '$2a$10$hGEua.fk2zjUH4ho80nmcuTDtW5dGXptKgrifYfbS9SwjJTfxoJ6K'
             }
         });
-        res.setHeader('Access-Control-Allow-Origin', 'https://silencecoderr-portfolio.vercel.app');
+        res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
         res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
         res.setHeader('Access-Control-Allow-Credentials', true);
