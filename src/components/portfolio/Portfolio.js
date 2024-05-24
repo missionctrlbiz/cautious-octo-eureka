@@ -41,7 +41,7 @@ const Portfolio = () => {
     const fetchData = async () => {
         try {
             await new Promise((resolve) => setTimeout(resolve, 2000));
-            const apiResponse = await fetch('http://localhost:5000/api/portfolio');
+            const apiResponse = await fetch('https://cautious-octo-eureka.vercel.app/api/portfolio');
             const responseData = await apiResponse.json();
             setAppScreens(responseData.recent_works);
 
