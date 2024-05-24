@@ -1,11 +1,10 @@
-import { Fade } from 'react-awesome-reveal';
 import React, { useEffect, useState } from 'react';
+import { Fade } from 'react-awesome-reveal';
 
 function Service() {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        // Replace with your actual API endpoint
         const fetchServices = async () => {
             try {
                 const response = await fetch('https://silencecoderr-portfolio-api.vercel.app/api');
@@ -30,21 +29,19 @@ function Service() {
                                 <h2>Crafting Innovative <span className="primary-clr">Mobile Solutions</span></h2>
                             </div>
                         </Fade>
-                        {
-                            services.map((service, index) => (
-                                <Fade triggerOnce duration={2000} direction='up' delay={300} key={index} className="col-lg-4 col-md-12">
-                                    <div className="section-card" style={{ marginBottom: '50px' }}>
-                                        <div className="card-description">
-                                            <img src={service.image} alt={service.name} />
-                                            <div className="detailed-txt">
-                                                <h5>{service.name}</h5>
-                                                <p>{service.short_desc}</p>
-                                            </div>
+                        {services.map((service, index) => (
+                            <Fade triggerOnce duration={2000} direction='up' delay={300} key={index} className="col-lg-4 col-md-12">
+                                <div className="section-card" style={{ marginBottom: '50px' }}>
+                                    <div className="card-description">
+                                        <img src={service.image} alt={service.name} />
+                                        <div className="detailed-txt">
+                                            <h5>{service.name}</h5>
+                                            <p>{service.short_desc}</p>
                                         </div>
                                     </div>
-                                </Fade>
-                            ))
-                        }
+                                </div>
+                            </Fade>
+                        ))}
                         <Fade triggerOnce duration={2000} direction='up' delay={300}>
                             <div className="border-bottom padding-tb-80"></div>
                         </Fade>
