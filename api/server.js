@@ -10,15 +10,12 @@ const PORT = process.env.PORT || 5000;
 // CORS Configuration
 const corsOptions = {
     origin: 'https://silencecoderr-portfolio.vercel.app', 
-    method: ["POST", "GET"],
+    methods: ['GET', 'POST'],
     credentials: true,
     optionsSuccessStatus: 200
 };
 
-
 app.use(cors(corsOptions));
-
-
 app.use(bodyParser.json());
 
 // Endpoint to fetch portfolio data
@@ -31,20 +28,12 @@ app.get('/api/portfolio', async (req, res) => {
             }
         });
 
-        // Set CORS headers
-        res.setHeader('Access-Control-Allow-Origin', 'https://silencecoderr-portfolio.vercel.app');
-        res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
-        res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-        res.setHeader('Access-Control-Allow-Credentials', true);
-
-        // Send response
         res.json(response.data);
     } catch (error) {
         console.error('Error fetching data:', error);
         res.status(500).json({ error: 'Failed to fetch data from API' });
     }
 });
-
 
 app.post('/api/send-email', async (req, res) => {
     const { fullName, email, phone, subject, message } = req.body;
@@ -75,7 +64,6 @@ app.post('/api/send-email', async (req, res) => {
         res.status(500).send({ message: 'Failed to send email' });
     }
 });
-
 
 // Start the server
 app.listen(PORT, () => {
