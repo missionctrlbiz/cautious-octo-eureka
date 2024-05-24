@@ -41,7 +41,7 @@ const Portfolio = () => {
     const fetchData = async () => {
         try {
             await new Promise((resolve) => setTimeout(resolve, 2000));
-            const apiResponse = await fetch('https://silencecoderr-portfolio-api.vercel.app/api/portfolio');
+            const apiResponse = await fetch('https://silencecoderr-portfolio-api.vercel.app/api');
             const responseData = await apiResponse.json();
             setAppScreens(responseData.recent_works);
 

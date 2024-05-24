@@ -9,7 +9,7 @@ function Experience() {
         // Replace with your actual API endpoints
         const fetchEducation = async () => {
             try {
-                const response = await fetch('https://silencecoderr-portfolio-api.vercel.app/api/portfolio');
+                const response = await fetch('https://silencecoderr-portfolio-api.vercel.app/api');
                 const data = await response.json();
                 setEducation(data.record.education); // Adjust based on your API response structure
             } catch (error) {
@@ -19,7 +19,7 @@ function Experience() {
 
         const fetchExperience = async () => {
             try {
-                const response = await fetch('https://silencecoderr-portfolio-api.vercel.app/api/portfolio');
+                const response = await fetch('https://silencecoderr-portfolio-api.vercel.app/api');
                 const data = await response.json();
                 setExperience(data.record.experience); // Adjust based on your API response structure
             } catch (error) {
