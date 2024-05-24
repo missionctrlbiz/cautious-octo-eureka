@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5000;
 
 // CORS Configuration
 const corsOptions = {
-    origin: 'https://silencecoderr-portfolio.vercel.app', 
+    origin: 'https://silencecoderr-portfolio.vercel.app',
     methods: ['GET', 'POST'],
     credentials: true,
     optionsSuccessStatus: 200
