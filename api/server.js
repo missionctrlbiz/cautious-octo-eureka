@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 5000;
 // CORS Configuration
 const corsOptions = {
     origin: 'https://cautious-octo-eureka-ydck.vercel.app/', 
+    method: ["POST", "GET"],
+    credentials: true,
     optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
