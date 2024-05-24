@@ -7,7 +7,7 @@ function Service() {
     useEffect(() => {
         const fetchServices = async () => {
             try {
-                const response = await fetch('https://silencecoderr-portfolio-api.vercel.app/api');
+                const response = await fetch('/api');
                 const data = await response.json();
                 setServices(data.record.services); // Adjust based on your API response structure
             } catch (error) {

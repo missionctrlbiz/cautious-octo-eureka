@@ -16,7 +16,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
-
+app.options('*', cors(corsOptions)); // include before other routes
 //add hello api on '/'
 
 app.get('/', (req, res) => {
@@ -34,10 +34,11 @@ app.get('/api', async (req, res) => {
                 'X-MASTER-KEY': '$2a$10$hGEua.fk2zjUH4ho80nmcuTDtW5dGXptKgrifYfbS9SwjJTfxoJ6K'
             }
         });
-        // res.setHeader('Access-Control-Allow-Origin', 'https://silencecoderr-portfolio.vercel.app');
-        // res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
-        // res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-        // res.setHeader('Access-Control-Allow-Credentials', true);
+        // Add CORS headers
+        res.setHeader('Access-Control-Allow-Origin', 'https://silencecoderr-portfolio.vercel.app');
+        res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+        res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+
         res.json(response.data);
     } catch (error) {
         console.error('Error fetching data:', error);
