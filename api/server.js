@@ -34,11 +34,6 @@ app.get('/api', async (req, res) => {
                 'X-MASTER-KEY': '$2a$10$hGEua.fk2zjUH4ho80nmcuTDtW5dGXptKgrifYfbS9SwjJTfxoJ6K'
             }
         });
-        // Add CORS headers
-        res.setHeader('Access-Control-Allow-Origin', 'https://silencecoderr-portfolio.vercel.app');
-        res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
-        res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-
         res.json(response.data);
     } catch (error) {
         console.error('Error fetching data:', error);
