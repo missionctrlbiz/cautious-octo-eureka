@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 // Endpoint to fetch portfolio data
 
 
-app.get('/api', async (req, res) => {
+app.get('https://silencecoderr-api.onrender.com/api', async (req, res) => {
     try {
         const response = await axios.get('https://api.jsonbin.io/v3/b/664f9679ad19ca34f86e10bc', {
             headers: {
@@ -41,7 +41,7 @@ app.get('/api', async (req, res) => {
     }
 });
 
-app.post('/api/send-email', async (req, res) => {
+app.post('https://silencecoderr-api.onrender.com/api/send-email', async (req, res) => {
     const { fullName, email, phone, subject, message } = req.body;
 
     const transporter = nodemailer.createTransport({

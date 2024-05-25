@@ -41,7 +41,7 @@ const Portfolio = () => {
     const fetchData = async () => {
         try {
             await new Promise((resolve) => setTimeout(resolve, 2000));
-            const apiResponse = await fetch('/api');
+            const apiResponse = await fetch('https://silencecoderr-api.onrender.com/api');
             const responseData = await apiResponse.json();
             setAppScreens(responseData.recent_works);
 

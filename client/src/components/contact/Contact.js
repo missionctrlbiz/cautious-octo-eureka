@@ -32,7 +32,7 @@ function Contact() {
         const errors = validateForm();
         if (Object.keys(errors).length === 0) {
             try {
-                const response = await fetch('/api/send-email', {
+                const response = await fetch('https://silencecoderr-api.onrender.com/api/send-email', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
