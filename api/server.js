@@ -16,7 +16,7 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use(bodyParser.json());
-app.options('*', cors(corsOptions)); // include before other routes
+
 //add hello api on '/'
 
 app.get('/', (req, res) => {
