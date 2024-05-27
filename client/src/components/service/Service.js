@@ -9,7 +9,14 @@ function Service() {
             try {
                 const response = await fetch('https://silencecoderr-api.onrender.com/api');
                 const data = await response.json();
-                setServices(data.record.services); // Adjust based on your API response structure
+                
+                // Add sequence number to each service
+                const numberedServices = data.record.services.map((service, index) => ({
+                    ...service,
+                    number: index + 1 // Starting from 1
+                }));
+
+                setServices(numberedServices); // Adjust based on your API response structure
             } catch (error) {
                 console.error('Error fetching services:', error);
             }
@@ -32,6 +39,9 @@ function Service() {
                         {services.map((service, index) => (
                             <Fade triggerOnce duration={2000} direction='up' delay={300} key={index} className="col-lg-4 col-md-12">
                                 <div className="section-card" style={{ marginBottom: '50px' }}>
+                                    <div className="sr-no">
+                                        <h6>{service.number}</h6>
+                                    </div>
                                     <div className="card-description">
                                         <img src={service.image} alt={service.name} />
                                         <div className="detailed-txt">
