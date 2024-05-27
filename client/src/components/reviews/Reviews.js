@@ -10,7 +10,7 @@ function Reviews() {
             try {
                 const response = await fetch('https://silencecoderr-api.onrender.com/api');
                 const data = await response.json();
-                setReviews(data.reviews);
+                setReviews(response.data.reviews);
                 setLoading(false);
             } catch (error) {
                 console.error('Error fetching reviews:', error);
