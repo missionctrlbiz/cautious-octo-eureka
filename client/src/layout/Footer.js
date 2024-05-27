@@ -62,8 +62,8 @@ function Footer() {
       )}
 
       <footer className="footer bg-clr" style={{ paddingBottom: "30px" }}>
-        <div className="container">
-          <div className="bx-footer-detail">
+        <div className="container d-flex justify-content-center align-items-center flex-column">
+          <div className="bx-footer-detail text-center">
             <div className="bx-copy">
               Copyright &copy; {currentYear} <a onClick={(e) => handleSubmit(e)} className="site-name" href="/">
                 {data?.record?.name || 'Loading...'} {/* Display fetched name or loading text */}

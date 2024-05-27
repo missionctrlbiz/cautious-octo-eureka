@@ -3,6 +3,7 @@ import Header from '../layout/Header';
 import Hero from '../components/hero/Hero';
 import Service from '../components/service/Service';
 import About from '../components/about/About';
+import Reviews from '../components/reviews/Reviews';
 import Experience from '../components/experience/Experience';
 import Portfolio from '../components/portfolio/Portfolio';
 import Contact from '../components/contact/Contact';
@@ -23,6 +24,7 @@ function Home() {
       <Header />
       <Hero />
       <Service />
+      <Reviews />
       <About />
       <Experience />
       <Portfolio />
