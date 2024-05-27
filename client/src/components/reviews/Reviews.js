@@ -1,18 +1,9 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Fade } from 'react-awesome-reveal';
-import { useInView } from 'react-intersection-observer';
 
 function Reviews() {
     const [reviews, setReviews] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [visible, setVisible] = useState(false);
-    const [index, setIndex] = useState(0);
-    const { ref, inView } = useInView({
-        triggerOnce: true,
-        threshold: 0.5, // Change this value as needed
-    });
-
-    const reviewsContainerRef = useRef(null);
 
     useEffect(() => {
         const fetchReviews = async () => {
@@ -25,21 +16,14 @@ function Reviews() {
                 console.error('Error fetching reviews:', error);
                 setLoading(false);
             }
-        };
+        };       
 
         fetchReviews();
     }, []);
 
-    useEffect(() => {
-        if (inView) {
-            setVisible(true);
-            setIndex(index + 1);
-        }
-    }, [inView]);
-
-    const handleScroll = (scrollOffset) => {
-        reviewsContainerRef.current.scrollLeft += scrollOffset;
-    };
+    if (loading) {
+        return <div>Loading...</div>; // or your custom spinner
+    }
 
     return (
         <section id="reviews" className="bx-service-section bx-section padding-tb-80">
@@ -53,16 +37,16 @@ function Reviews() {
                     </Fade>
                 </div>
                 <div className="row">
-                    <div className="col-lg-6 col-md-12 col-sm-12">
+                    <div className="col-md-6">
                         <Fade triggerOnce duration={2000} direction='up' delay={400} className="reviews bx-box">
-                            <div className="reviews-container" ref={reviewsContainerRef}>
-                                {reviews.map((review, i) => (
-                                    <div key={i} className={`review-item ${visible ? 'visible' : ''}`}>
-                                        <div className="review-content">
+                            <div className="reviews-container" style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
+                                {reviews.map((review, index) => (
+                                    <Fade triggerOnce duration={2000} direction='up' delay={400} key={index} className="review-item">
+                                        <div className="review-content" style={{ display: 'inline-block', width: 'calc(50% - 20px)', margin: '0 10px' }}>
                                             <p className="review-text">{review.review}</p>
                                             <p className="review-author">- {review.name}</p>
                                         </div>
-                                    </div>
+                                    </Fade>
                                 ))}
                             </div>
                         </Fade>
