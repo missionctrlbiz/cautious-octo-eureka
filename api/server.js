@@ -8,7 +8,7 @@ const app = express();
 
 // CORS Configuration
 const corsOptions = {
-    origin: '*', 
+    origin: 'https://silencecoderr-portfolio.vercel.app', 
     methods: ['GET', 'POST'],
     credentials: true,
     optionsSuccessStatus: 200
