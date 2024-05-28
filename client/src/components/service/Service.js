@@ -7,7 +7,7 @@ function Service() {
     useEffect(() => {
         const fetchServices = async () => {
             try {
-                const response = await fetch('http://localhost:3000');
+                const response = await fetch('https://silencecoderr-api.onrender.com/api');
                 const data = await response.json();
                 
                 // Add sequence number to each service
