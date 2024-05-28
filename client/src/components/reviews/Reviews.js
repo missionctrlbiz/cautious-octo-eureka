@@ -26,7 +26,7 @@ function Reviews() {
     }
 
     return (
-        <section id="reviews" className="bx-service-section bx-section padding-tb-80">
+        <section id="reviews" className="bx-service-section bx-section padding-tb-80 ">
             <div className="container">
                 <div className="shape-1"></div>
                 <div className="shape-2"></div>
@@ -37,14 +37,14 @@ function Reviews() {
                     </Fade>
                 </div>
                 <div className="row">
-                    <div className="col-md-12">
+                    <div className="col-lg-6 col-md-12 col-sm-12">
                         <Fade triggerOnce duration={2000} direction='up' delay={400} className="reviews bx-box">
                             <div className="reviews-container" style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
                                 {reviews.map((review, index) => (
-                                    <Fade triggerOnce duration={2000} direction='up' delay={400} key={index} className="review-item">
-                                        <div className="review-content" style={{ display: 'inline-block', width: 'calc(50% - 20px)', margin: '0 10px' }}>
+                                    <Fade triggerOnce duration={2000} direction='up' delay={400} key={index} className="review-item" style={{ display: 'inline-block', marginRight: '20px' }}>
+                                        <div className="review-content">
                                             <p className="review-text">{review.review}</p>
-                                            <h5 className="timeline-title">- {review.name}</h5>
+                                            <p className="review-author">- {review.name}</p>
                                         </div>
                                     </Fade>
                                 ))}
