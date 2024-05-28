@@ -37,14 +37,14 @@ function Reviews() {
                     </Fade>
                 </div>
                 <div className="row">
-                    <div className="col-md-6">
+                    <div className="col-md-12">
                         <Fade triggerOnce duration={2000} direction='up' delay={400} className="reviews bx-box">
                             <div className="reviews-container" style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
                                 {reviews.map((review, index) => (
                                     <Fade triggerOnce duration={2000} direction='up' delay={400} key={index} className="review-item">
                                         <div className="review-content" style={{ display: 'inline-block', width: 'calc(50% - 20px)', margin: '0 10px' }}>
                                             <p className="review-text">{review.review}</p>
-                                            <p className="review-author">- {review.name}</p>
+                                            <h5 className="timeline-title">- {review.name}</h5>
                                         </div>
                                     </Fade>
                                 ))}
