@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Fade } from 'react-awesome-reveal';
+import './Reviews.css';
+
 
 function Reviews() {
     const [reviews, setReviews] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
         const fetchReviews = async () => {
@@ -21,6 +23,13 @@ function Reviews() {
         fetchReviews();
     }, []);
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+        }, 3000); // Change slide every 3 seconds
+        return () => clearInterval(interval);
+    }, [reviews.length]);
+
     if (loading) {
         return <div>Loading...</div>; // or your custom spinner
     }
@@ -30,32 +39,37 @@ function Reviews() {
             <div className="container">
                 <div className="shape-1"></div>
                 <div className="shape-2"></div>
+                
                 <div className="row mb-m-30">
-                    <Fade triggerOnce duration={2000} direction='up' delay={300} className="title">
+                    <div className="title">
                         <p className="light-txt">Discover What Others Say</p>
                         <h2>Exploring<span className="primary-clr"> Customer Reviews</span></h2>
-                    </Fade>
+                    </div>
                 </div>
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="reviews-container" style={{ overflowX: 'auto', whiteSpace: 'nowrap' }}>
-                            <Fade triggerOnce duration={2000} direction='up' delay={400} className="reviews bx-box">
-                                <ul className="timeline">
-                                    {reviews.map((review, index) => (
-                                        <Fade key={index} triggerOnce duration={2000} direction='up' delay={400} className="timeline-item">
-                                            <li>
-                                                <div className="timeline-marker"></div>
-                                                <div className="timeline-content">
-                                                    <div className="timeline-info">
-                                                        <span>- {review.name}</span>
-                                                    </div>
-                                                    <p className="sub">{review.review}</p>
-                                                </div>
-                                            </li>
-                                        </Fade>
-                                    ))}
-                                </ul>
-                            </Fade>
+                        <div className="reviews-container">
+                            <div className="review-wrapper" style={{ transform: `translateX(${-currentIndex * 100}%)`, transition: 'transform 0.5s ease-in-out', marginBottom: `0px` }}>
+                                {reviews.map((review, index) => (
+                                    <div
+                                        key={index}
+                                        className="review-item"
+                                        style={{ marginBottom: `0px` }}
+                                    >
+                                        <div className="review-content" style={{ marginBottom: `0px` }}>
+
+                                            <blockquote>
+
+                                                <p className="review-text">{review.review}</p>
+                                            </blockquote>
+                                            {review.picture && <img src={review.picture} alt={review.name} className="review-picture" />}
+                                            <p className="review-author">- {review.name}</p>
+                                            
+                                            {review.location && <p className="review-location">{review.location}</p>}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -27,9 +27,10 @@ function Service() {
 
     return (
         <div>
-            <section id="service" className="bx-service-section bx-section padding-tb-80 body-bg">
+            <section id="service" className="bx-service-section bx-section body-bg" style={{ marginTop: `80px`, marginBottom: `20px` }}>
                 <div className="container">
                     <div className="row">
+
                         <Fade triggerOnce duration={2000} direction='up' delay={300} >
                             <div className="title">
                                 <p className="light-txt">Top Mobile Development Services</p>
@@ -43,9 +44,10 @@ function Service() {
                                         <h6>{service.number}</h6>
                                     </div>
                                     <div className="card-description">
-                                        <img src={service.image} alt={service.name} />
+                                        <img src={service.image} alt={service.name} style={{ width: '40%', height: '40%' }} />
                                         <div className="detailed-txt">
                                             <h5>{service.name}</h5>
+
                                             <p>{service.short_desc}</p>
                                         </div>
                                     </div>
@@ -53,7 +55,7 @@ function Service() {
                             </Fade>
                         ))}
                         <Fade triggerOnce duration={2000} direction='up' delay={300}>
-                            <div className="border-bottom padding-tb-80"></div>
+                            <div className="border-bottom padding-tb-20"></div>
                         </Fade>
                     </div>
                 </div>

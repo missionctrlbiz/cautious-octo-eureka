@@ -22,9 +22,11 @@ function About() {
 
     return (
         <div>
-            <section id="about" className={`bx-about-section bx-section padding-b-80 ${"#about" ? "padding-top" : ""}`}>
-                <div className="container">
+            <section id="about" className={`bx-about-section bx-section padding-b-50 ${"#about" ? "padding-top" : ""}`}  >
+                <div className="container" >
                     <div className="row">
+
+
                         <div className="col-md-12 col-lg-6">
                             <Fade triggerOnce duration={2000} direction='up' delay={300} className="sec-img">
                                 <img src="assets/img/about/img-1.jpg" alt="" />
