@@ -43,10 +43,9 @@ const Portfolio = () => {
     const fetchData = async () => {
         try {
             await new Promise((resolve) => setTimeout(resolve, 2000));
-            const apiResponse = await fetch('https://silencecoderr-api.onrender.com/api');
-            const responseData = await apiResponse.json();
-            setAppScreens(responseData.recent_works);
-
+            const response = await fetch('https://silencecoderr-api.onrender.com/api');
+            const data = await response.json();
+            setAppScreens(data.record.recent_works);
             setIsLoading(false);
         } catch (error) {
             setError(error);
