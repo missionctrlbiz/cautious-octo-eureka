@@ -110,7 +110,7 @@ function Hero() {
                         <div className="col-md-6">
                             <div className="profile-img">
                                 <div className="profile-detail">
-                                    <img src="assets/img/bg/girl.png" alt="" />
+                                    <img src={heroData.profile_pic}  alt="" />
                                 </div>
                             </div>
                         </div>

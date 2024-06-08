@@ -10,6 +10,8 @@ import Contact from '../components/contact/Contact';
 import Footer from '../layout/Footer';
 import { useDispatch } from 'react-redux';
 import { setLight } from '../store/counter/ImageSlice';
+import BrandSlider from '../components/brands/BrandSlider';
+
 
 function Home() {
 
@@ -28,6 +30,7 @@ function Home() {
       <About />
       <Experience />
       <Portfolio />
+      <BrandSlider />
       <Contact />
       <Footer />
     </div>
